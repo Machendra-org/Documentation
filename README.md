@@ -160,7 +160,7 @@ https://github.com/Aatmaani-org/Devops.git
 In this Phase we are Installing the Monitoring Tools and Configuring tools to the my EKS Cluster 
 ## Monitoring Tools
 ### _Prometheus_
-Prometheus is an open-source systems monitoring and alerting, Prometheus collects and stores its metrics as time series data, i.e. metrics information is stored with the timestamp.
+Prometheus is an open-source systems monitoring and alerting, Prometheus collects and stores its metrics as time series data, i.e. metrics information is stored with the timestamp and the Prometheus listening Port is `9090`. 
 ### Prometheus-Grafana Architecture
 ![alt text](https://github.com/Machendra-org/Documentation/blob/6287c7a171fc87fce4a7eb64f94dd4e97527068d/Prometheus.drawio.png?raw=)
 
@@ -176,7 +176,7 @@ In this Iam creating a alerting.rules.yml for Checking the below information
 
 this alerting.rules.yml file pass to the `sudo vi /opt/promethues/promethues.yml`
 ### _Alert-Manager_
-The Alertmanager handles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as email, Slack. It also takes care of silencing and inhibition of alerts.
+The Alertmanager handles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as email, Slack. It also takes care of silencing and inhibition of alerts and the Alert-manager listening Port is `9093`.
 Installation of `Alert-Manager` using below Link
 ```sh
 https://linuxhint.com/install-configure-prometheus-alert-manager-ubuntu/
@@ -184,7 +184,7 @@ https://linuxhint.com/install-configure-prometheus-alert-manager-ubuntu/
 To send alert to slack from alertmanager edit alertmanager.yml in 
 `sudo vi /etc/alertmanager/alertmanager.yml`
 ### _Node-Exporter_
-Node Exporter is a Prometheus exporter for server level and OS level metrics with configurable metric collectors. It helps us in measuring various server resources such as RAM, disk space, and CPU utilization.
+Node Exporter is a Prometheus exporter for server level and OS level metrics with configurable metric collectors. It helps us in measuring various server resources such as RAM, disk space, and CPU utilization and the Node-exporter listening Port is `9100`.
 
 Installation of `Node-Exporter` using below Link
 ```sh
@@ -192,7 +192,7 @@ https://linuxhint.com/install-prometheus-on-ubuntu/
 ```
 This server IP pass to the prometheus.yml in `static_configs/target/`
 ### _Grafana_
-Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.
+Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources and the Grafana listening Port is `3000`.
 Installation of `Grafana` using below Link
 ```sh
 https://computingforgeeks.com/how-to-install-grafana-on-ubuntu-linux-2/
@@ -213,7 +213,7 @@ EFK is a popular and the best open-source choice for the Kubernetes log aggregat
 #### ElasticSearch Logstash Kibana(ELK)
 ![image alt test](https://github.com/Machendra-org/Documentation/blob/1bfa30a6ecab16fa13b5ebf208a792c2b4cf2d18/ELK.drawio.png?raw=)
 #### ElasticSearch
-Elasticsearch is a NoSQL database, Elasticsearch also allows you to store, search and analyze big volume of data.
+Elasticsearch is a NoSQL database, Elasticsearch also allows you to store, search and analyze big volume of data. the ElasticSearch listening Port is `9200` 
 Installation of `Elasticsearch` using below Link
 ```sh
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04
@@ -239,7 +239,7 @@ Installation of `Kibana` using below Link
 ```sh
 https://www.elastic.co/guide/en/kibana/current/deb.html
 ```
-In kibana.yml we are edit some sections are server.host and server.port.
+In kibana.yml we are edit some sections are server.host and server.port. and the Kibana listening Port is `5601`
 #### Logstash
 Logstash is the data collection pipeline tool. It collects data inputs and feeds into the Elasticsearch. It gathers all types of data from the different source and makes it available for further use.
 Installation of `Logstash` using below Link
