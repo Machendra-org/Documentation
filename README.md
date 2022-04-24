@@ -247,6 +247,11 @@ Installation of `Logstash` using below Link
 https://www.elastic.co/guide/en/logstash/current/installing-logstash.html
 ```
 Collect logs and events data. It even parses and transforms data.
+## Phase - 6
+In this Phase I Explain what causes happens to me, but it is small cause and what cause is Verisons mismatch Elastic Filebeat/fluent-bit Kibana, after time we sort out this problem installing correct versions of Elastic Filebeat/fluent-bit Kibana. before installation tools you need check prerequisite that particular and Versions.
+
+### Conclusion
+This Project help me to improve how do Project, I Learn new things like Monitoring tools (Prometheus,Grafana), Logging tools (EFK and ELK) and creating Documentation of Project.
 
 
 
