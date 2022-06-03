@@ -146,8 +146,8 @@ Using Helm I create a Helm-chart using this command `helm create Nodewebsite` I 
 
 We Pull Docker Image from `ECR` and we pass image to the `values` file and then  I installed above values files like below..
 In Dev we are devloping application of Nodewebsite and pull image to ECR and then installing this file `helm install node-dev Nodewebsite -n dev -f values-dev.yml`
-In Qa we are testing the application working fine or not installing this file `helm install node-qa Nodewebsite -n dev -f values-qa.yml`
-In Prod we are see application working fine and we increase Replicas and we need add Horizontal Pod AutoScaler, it is used to whenever pods goes down this will creating same pods of that pods. `helm install node-prod Nodewebsite -n dev -f values-prod.yml`
+In Qa we are testing the application working fine or not installing this file `helm install node-qa Nodewebsite -n qa -f values-qa.yml`
+In Prod we are see application working fine and we increase Replicas and we need add Horizontal Pod AutoScaler, it is used to whenever pods goes down this will creating same pods of that pods. `helm install node-prod Nodewebsite -n prod -f values-prod.yml`
 this values files push to the below given GitHub repo..
 ```sh
 https://github.com/Aatmaani-org/Devops.git
